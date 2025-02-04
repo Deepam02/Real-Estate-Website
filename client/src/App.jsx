@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import "./App.css";
 import Properties from "./pages/Properties";
+import Property from "./pages/property/property";
 import Website from "./pages/Website";
 import Layout from "./components/Layout/Layout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -18,7 +19,10 @@ function App() {
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Website />} />
-              <Route path="/Properties" element={<Properties />} />
+              <Route path="/Properties">
+              <Route index element={<Properties />} />
+              <Route path=":propertyId" element={<Property />} />
+              </Route>
             </Route>
           </Routes>
         </Suspense>
