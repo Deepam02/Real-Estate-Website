@@ -1,13 +1,17 @@
-import React, { useState } from "react";
-import "./Properties.css";
-import SearchBar from "../components/SearchBar/SearchBar";
-import useProperties from "../hooks/useProperties";
+import React, { useContext, useState } from "react";
+import "../Properties.css";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
-import PropertyCard from "../components/PropertyCard/PropertyCard";
+import PropertyCard from "../../components/PropertyCard/PropertyCard";
+import UserDetailContext from "../../context/UserDetailContext";
 
-const Properties = () => {
+const Favourites = () => {
   const { data, isError, isLoading } = useProperties();
   const [filter, setFilter] = useState("");
+  const {
+    userDetails: { favourites },
+  } = useContext(UserDetailContext);
 
   if (isError) {
     return (
@@ -38,6 +42,10 @@ const Properties = () => {
           {
             // data.map((card,i)=>(<PropertyCard card={card} key={i}/>))
             data
+              .filter((property) =>
+                favourites.includes(property.id)
+              )
+
               .filter(
                 (property) =>
                   property.title.toLowerCase().includes(filter.toLowerCase()) ||
@@ -54,4 +62,4 @@ const Properties = () => {
   );
 };
 
-export default Properties;
+export default Favourites;

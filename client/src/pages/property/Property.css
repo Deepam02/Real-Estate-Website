@@ -1,6 +1,8 @@
 .property-container{
     gap: 2rem;
     position: relative;
+    min-height: 100vh;  /* Ensures it expands fully */
+    overflow: visible;
 }
 
 .property-container .like{
