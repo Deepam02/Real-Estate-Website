@@ -2,6 +2,12 @@
 
 A modern full-stack real estate application built with React, Node.js, and Prisma. This application allows users to browse, search, and manage real estate listings with a beautiful and intuitive user interface.
 
+## 🔗 Live Demo
+
+Check out the live version of the project deployed on Vercel:  
+👉 [https://real-estate-website-five-green.vercel.app/](https://real-estate-website-five-green.vercel.app/)
+
+
 ## 🚀 Features
 
 - Modern and responsive UI built with React and Material-UI
@@ -111,10 +117,3 @@ The API endpoints are available at `http://localhost:5000/api`. Key endpoints in
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Auth0 for authentication
-- Material-UI for the component library
-- Leaflet for mapping functionality
-- All other open-source libraries used in this project 
