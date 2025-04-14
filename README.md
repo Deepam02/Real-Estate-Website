@@ -112,10 +112,6 @@ The API endpoints are available at `http://localhost:5000/api`. Key endpoints in
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👥 Authors
-
-- Your Name - Initial work
-
 ## 🙏 Acknowledgments
 
 - Auth0 for authentication
